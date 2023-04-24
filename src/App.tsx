@@ -18,10 +18,10 @@ const App = () => {
 
   return (
     <div className="h-screen flex overflow-y-scroll">
-      <div className="w-1/5 bg-white py-5 fixed">
+      <div className="w-1/5 bg-white py-5 fixed border-l border-[#EFF1F6]">
         <Sidebar />
       </div>
-      <div className="w-4/5 bg-[#E5E5E5] ml-[20%]">hey</div>
+      <div className="w-4/5 ml-[20%]">hey</div>
     </div>
   );
 };
