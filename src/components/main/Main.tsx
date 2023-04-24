@@ -7,6 +7,7 @@ import IgraphData from "../../typings/graph-data";
 import TopReferrals from "./charts/doughnut_chart_cards/TopReferralSources";
 import TopLocations from "./charts/doughnut_chart_cards/TopLocations";
 import ITopLocation from "../../typings/top-locations";
+import TopSources from "./charts/doughnut_chart_cards/TopReferralSources";
 
 interface Data {
   graph_data: IgraphData;
@@ -44,7 +45,7 @@ const Main = () => {
       <LineChartCard graphData={data?.graph_data} />
       <div className="my-4 flex gap-4 w-full">
         {data?.top_locations && <TopLocations locations={data.top_locations} />}
-        <TopReferrals />
+        {data?.top_sources && <TopSources sources={data.top_sources} />}
       </div>
     </div>
   );
