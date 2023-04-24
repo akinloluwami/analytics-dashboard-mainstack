@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Durations from "./Durations";
+import LineChartCard from "./LineChartCard";
 
 const Main = () => {
   const [data, setData] = useState(null);
@@ -29,6 +30,7 @@ const Main = () => {
         <p className="text-accent font-medium cursor-pointer">View analytics</p>
       </div>
       <Durations />
+      <LineChartCard />
     </div>
   );
 };
