@@ -17,11 +17,11 @@ const App = () => {
   }, []);
 
   return (
-    <div className="h-screen flex">
-      <div className="w-1/5 bg-white py-5">
+    <div className="h-screen flex overflow-y-scroll">
+      <div className="w-1/5 bg-white py-5 fixed">
         <Sidebar />
       </div>
-      <div className="w-4/5 bg-[#E5E5E5]">hey</div>
+      <div className="w-4/5 bg-[#E5E5E5] ml-[20%]">hey</div>
     </div>
   );
 };
