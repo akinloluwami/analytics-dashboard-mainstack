@@ -17,8 +17,8 @@ const DoughnutChart = ({ data }: any) => {
       data={data}
       options={options}
       style={{
-        width: "250px",
-        height: "250px",
+        width: "170px",
+        height: "170px",
       }}
     />
   );
