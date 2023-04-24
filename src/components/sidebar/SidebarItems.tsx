@@ -4,12 +4,19 @@ interface SidebarItemProps {
   active?: boolean;
 }
 
-const SidebarItems = ({ items }: { items: SidebarItemProps[] }) => {
+const SidebarItems = ({
+  items,
+  title,
+}: {
+  items: SidebarItemProps[];
+  title?: string;
+}) => {
   return (
     <div className="">
+      <p>{title}</p>
       {items.map((item) => (
         <div
-          className={`flex ${item.active && "active-link"}`}
+          className={`flex my-6 ${item.active && "active-link"}`}
           key={crypto.randomUUID()}
         >
           <img src={item.icon} className="ml-8" />{" "}
