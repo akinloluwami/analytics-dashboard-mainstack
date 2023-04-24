@@ -1,18 +1,31 @@
 const Durations = () => {
   const durations = [
-    "1 Day",
-    "3 Days",
-    "7 Days",
-    "30 Days",
-    "All Time",
-    "Custom Date",
+    {
+      label: "1 Day",
+    },
+    {
+      label: "3 Days",
+    },
+    {
+      label: "7 Days",
+    },
+    {
+      label: "30 Days",
+    },
+    {
+      label: "All Time",
+      active: true,
+    },
+    {
+      label: "Custom Date",
+    },
   ];
 
   return (
-    <div>
+    <div className="flex space-x-4 my-5">
       {durations.map((duration) => (
-        <button key={duration} className="pill">
-          {duration}
+        <button key={crypto.randomUUID()} className={`pill`}>
+          {duration.active}
         </button>
       ))}
     </div>
