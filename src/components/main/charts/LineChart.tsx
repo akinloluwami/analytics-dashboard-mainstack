@@ -18,7 +18,7 @@ ChartJS.register(
   Filler
 );
 
-import { faker } from "@faker-js/faker";
+import IgraphData from "../../../typings/graph-data";
 
 export const options = {
   responsive: true,
@@ -40,27 +40,24 @@ export const options = {
   },
 };
 
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      borderColor: "rgb(255, 99, 132)",
-      fill: true,
-      backgroundColor: (context: any) => {
-        const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, 300);
-        gradient.addColorStop(0, "rgba(255, 84, 3, 0.5)");
-        gradient.addColorStop(1, "rgba(255, 84, 3, 0.01)");
-        return gradient;
+const LineChart = ({ graphData }: { graphData: IgraphData }) => {
+  const data = {
+    labels: Object.keys(graphData.views),
+    datasets: [
+      {
+        label: "Views",
+        data: Object.values(graphData.views),
+        borderColor: "rgb(255, 99, 132)",
+        fill: true,
+        backgroundColor: (context: any) => {
+          const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, 300);
+          gradient.addColorStop(0, "rgba(255, 84, 3, 0.5)");
+          gradient.addColorStop(1, "rgba(255, 84, 3, 0.01)");
+          return gradient;
+        },
       },
-    },
-  ],
-};
-
-const LineChart = () => {
+    ],
+  };
   return (
     <div className="w-full">
       <Line
