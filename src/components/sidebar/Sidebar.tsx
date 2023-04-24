@@ -7,6 +7,7 @@ const Sidebar = () => {
     {
       title: "Dashboard",
       icon: dashboard,
+      active: true,
     },
   ];
   return (
