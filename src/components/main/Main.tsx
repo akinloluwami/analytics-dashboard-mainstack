@@ -2,9 +2,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Durations from "./Durations";
 import LineChartCard from "./LineChartCard";
+import ITopCountries from "../../typings/top-countries";
+import ITopSources from "../../typings/top-sources";
+
+interface Data {
+  graph_data: any;
+  top_locations: ITopCountries;
+  top_sources: ITopSources;
+}
 
 const Main = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Data | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -30,7 +38,7 @@ const Main = () => {
         <p className="text-accent font-medium cursor-pointer">View analytics</p>
       </div>
       <Durations />
-      <LineChartCard />
+      <LineChartCard graphData={data?.graph_data} />
     </div>
   );
 };
