@@ -51,8 +51,10 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div>
-      <img src={mainstackLogo} className="ml-8" alt="logo" />
+    <div className="h-screen overflow-y-scroll">
+      <div className="sticky top-0 z-50 w-full h-16 bg-white">
+        <img src={mainstackLogo} className="ml-8" alt="logo" />
+      </div>
       <div className="">
         <SidebarItems items={mainItems} />
         <SidebarItems items={otherItems} title="Others 1" />
