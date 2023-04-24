@@ -28,7 +28,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <h1 className="text-xl font-bold mb-4">Dashboard</h1>
       <div className="flex items-center justify-between">
         <div className="">
