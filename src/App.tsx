@@ -1,11 +1,9 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
 import Sidebar from "./components/sidebar/Sidebar";
 import Main from "./components/main/Main";
 
 const App = () => {
   return (
-    <div className="h-screen flex overflow-y-scroll">
+    <div className="flex overflow-y-scroll">
       <div className="w-1/5 bg-white py-5 fixed border-l border-[#EFF1F6]">
         <Sidebar />
       </div>
