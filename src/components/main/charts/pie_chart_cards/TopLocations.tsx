@@ -1,9 +1,14 @@
+import ITopLocation from "../../../../typings/top-locations";
 import PieChartCard from "./PieChartCard";
 
-const TopLocations = () => {
+const TopLocations = ({ locations }: { locations: ITopLocation[] }) => {
   return (
     <PieChartCard title="Top Locations">
-      <div className=""></div>
+      <div className="">
+        {locations.map((location) => (
+          <div className="">{location.country}</div>
+        ))}
+      </div>
     </PieChartCard>
   );
 };
