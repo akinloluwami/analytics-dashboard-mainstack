@@ -10,7 +10,7 @@ const PieChartCard = ({ title, children }: PieChartCardProps) => {
         <h1 className="font-bold">{title}</h1>
         <button className="text-accent font-semibold">View full reports</button>
       </div>
-      <div className="">{children}</div>
+      <div className="mt-5">{children}</div>
     </div>
   );
 };
