@@ -6,28 +6,28 @@ const TopLocations = ({ locations }: { locations: ITopLocation[] }) => {
     switch (country) {
       case "Nigeria":
         return {
-          color: "#008000",
+          color: "#599EEA",
           flagImage: "/NG/flat/64.png",
         };
 
       case "Germany":
         return {
-          color: "#FF0000",
+          color: "#844FF6",
           flagImage: "/DE/flat/64.png",
         };
       case "Ghana":
         return {
-          color: "#FFA500",
+          color: "#0FB77A",
           flagImage: "/GH/flat/64.png",
         };
       case "Finland":
         return {
-          color: "#0000FF",
+          color: "#FAB70A",
           flagImage: "/FI/flat/64.png",
         };
       case "United Kingdom":
         return {
-          color: "#FFFFFF",
+          color: "#F09468",
           flagImage: "/GB/flat/64.png",
         };
       default:
@@ -55,14 +55,20 @@ const TopLocations = ({ locations }: { locations: ITopLocation[] }) => {
     <PieChartCard title="Top Locations">
       <div className="">
         {modifiedData.map((location) => (
-          <div className="my-2 flex" key={location.country}>
+          <div className="my-3 flex items-center" key={location.country}>
             <img
               src={`https://flagsapi.com${location.flagImage}`}
               alt={location.country}
               className="w-5 mr-2"
             />
             {location.country}{" "}
-            <span className="font-semibold">{location.percent}%</span>
+            <span className="font-semibold ml-2">{location.percent}%</span>
+            <div
+              className="w-3 h-3 rounded-full ml-2"
+              style={{
+                backgroundColor: location.color,
+              }}
+            ></div>
           </div>
         ))}
       </div>
