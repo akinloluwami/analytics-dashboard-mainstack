@@ -8,22 +8,22 @@ const TopSources = ({ sources }: { sources: ITopSources[] }) => {
       case "google":
         return {
           color: "#4285f4",
-          icon: "https://www.gstatic.com/images/branding/product/2x/google_cloud_48dp.png",
+          icon: "https://cdn.cdnlogo.com/logos/g/35/google-icon.svg",
         };
       case "instagram":
         return {
           color: "#e4405f",
-          icon: "https://cdn.worldvectorlogo.com/logos/instagram-2-1.svg",
+          icon: "https://cdn.cdnlogo.com/logos/i/32/instagram-icon.svg",
         };
       case "facebook":
         return {
           color: "#3b5998",
-          icon: "https://cdn.worldvectorlogo.com/logos/facebook-icon-1.svg",
+          icon: "https://cdn.cdnlogo.com/logos/f/91/facebook-icon.svg",
         };
       case "linkedin":
         return {
           color: "#0e76a8",
-          icon: "https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg",
+          icon: "https://cdn.cdnlogo.com/logos/l/66/linkedin-icon.svg",
         };
       default:
         return {
