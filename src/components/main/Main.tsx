@@ -4,7 +4,6 @@ import Durations from "./Durations";
 import LineChartCard from "./LineChartCard";
 import ITopSources from "../../typings/top-sources";
 import IgraphData from "../../typings/graph-data";
-import TopReferrals from "./charts/doughnut_chart_cards/TopReferralSources";
 import TopLocations from "./charts/doughnut_chart_cards/TopLocations";
 import ITopLocation from "../../typings/top-locations";
 import TopSources from "./charts/doughnut_chart_cards/TopReferralSources";
