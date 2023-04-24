@@ -4,15 +4,16 @@ import Durations from "./Durations";
 import LineChartCard from "./LineChartCard";
 import ITopCountries from "../../typings/top-countries";
 import ITopSources from "../../typings/top-sources";
+import IgraphData from "../../typings/graph-data";
 
 interface Data {
-  graph_data: any;
+  graph_data: IgraphData;
   top_locations: ITopCountries;
   top_sources: ITopSources;
 }
 
 const Main = () => {
-  const [data, setData] = useState<Data | null>(null);
+  const [data, setData] = useState<Data>();
 
   useEffect(() => {
     (async () => {
