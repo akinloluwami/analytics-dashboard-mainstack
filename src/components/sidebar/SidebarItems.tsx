@@ -12,15 +12,19 @@ const SidebarItems = ({
   title?: string;
 }) => {
   return (
-    <div className="">
-      <p>{title}</p>
+    <div className="my-8">
+      <p className="uppercase ml-8 mb-3 font-medium text-sec_gray text-sm">
+        {title}
+      </p>
       {items.map((item) => (
         <div
-          className={`flex my-6 ${item.active && "active-link"}`}
+          className={`flex mb-1 transition-colors cursor-pointer py-4 hover:bg-orange-100 ${
+            item.active && "active-link"
+          }`}
           key={crypto.randomUUID()}
         >
           <img src={item.icon} className="ml-8" />{" "}
-          <span className="font-semibold text-lg items-center ml-2">
+          <span className="font-semibold items-center ml-2 text-sec_gray">
             {item.title}
           </span>
         </div>
