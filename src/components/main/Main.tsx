@@ -5,6 +5,7 @@ import LineChartCard from "./LineChartCard";
 import ITopCountries from "../../typings/top-countries";
 import ITopSources from "../../typings/top-sources";
 import IgraphData from "../../typings/graph-data";
+import PieChartCard from "./PieChartCard";
 
 interface Data {
   graph_data: IgraphData;
@@ -40,6 +41,10 @@ const Main = () => {
       </div>
       <Durations />
       <LineChartCard graphData={data?.graph_data} />
+      <div className="my-4 flex gap-4 w-full">
+        <PieChartCard title="Top Locations" />
+        <PieChartCard title="Top Referral Sources" />
+      </div>
     </div>
   );
 };
