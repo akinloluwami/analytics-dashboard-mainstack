@@ -15,7 +15,20 @@ const Main = () => {
     })();
   }, []);
 
-  return <div>Main</div>;
+  return (
+    <div>
+      <h1 className="text-xl font-bold mb-4">Dashboard</h1>
+      <div className="flex items-center justify-between">
+        <div className="">
+          <h1 className="text-2xl font-bold mb-1">
+            Good morning, Blessing ⛅️
+          </h1>
+          <p className="font-medium">Check out your dashboard summary.</p>
+        </div>
+        <p className="text-accent font-medium cursor-pointer">View analytics</p>
+      </div>
+    </div>
+  );
 };
 
 export default Main;
