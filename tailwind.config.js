@@ -6,6 +6,7 @@ export default {
       colors: {
         accent: "#FF5403",
         sec_gray: "#56616B",
+        light_gray: "#EFF1F6",
       },
     },
   },
