@@ -1,9 +1,9 @@
-interface PieChartCardProps {
+interface DoughnutChartCardProps {
   title: string;
   children: React.ReactNode;
 }
 
-const PieChartCard = ({ title, children }: PieChartCardProps) => {
+const DoughnutChartCard = ({ title, children }: DoughnutChartCardProps) => {
   return (
     <div className="w-1/2 border-2 border-light_gray p-5 rounded-md">
       <div className="flex items-center justify-between">
@@ -15,4 +15,4 @@ const PieChartCard = ({ title, children }: PieChartCardProps) => {
   );
 };
 
-export default PieChartCard;
+export default DoughnutChartCard;

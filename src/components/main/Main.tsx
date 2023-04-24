@@ -4,8 +4,8 @@ import Durations from "./Durations";
 import LineChartCard from "./LineChartCard";
 import ITopSources from "../../typings/top-sources";
 import IgraphData from "../../typings/graph-data";
-import TopReferrals from "./charts/pie_chart_cards/TopReferralSources";
-import TopLocations from "./charts/pie_chart_cards/TopLocations";
+import TopReferrals from "./charts/doughnut_chart_cards/TopReferralSources";
+import TopLocations from "./charts/doughnut_chart_cards/TopLocations";
 import ITopLocation from "../../typings/top-locations";
 
 interface Data {
