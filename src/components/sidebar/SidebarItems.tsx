@@ -24,7 +24,11 @@ const SidebarItems = ({
           key={crypto.randomUUID()}
         >
           <img src={item.icon} className="ml-8" />{" "}
-          <span className="font-semibold items-center ml-2 text-sec_gray">
+          <span
+            className={`font-semibold items-center ml-2 ${
+              item.active && "text-accent"
+            }`}
+          >
             {item.title}
           </span>
         </div>
