@@ -1,4 +1,5 @@
 import info from "../../assets/icons/info.svg";
+import LineChart from "./charts/LineChart";
 
 const LineChartCard = () => {
   return (
@@ -13,6 +14,8 @@ const LineChartCard = () => {
         </button>
       </div>
       <h1 className="text-4xl font-bold mt-3">500</h1>
+
+      <LineChart />
     </div>
   );
 };
