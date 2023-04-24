@@ -5,6 +5,7 @@ import dashboard from "../../assets/icons/dashboard.svg";
 import edit from "../../assets/icons/edit.svg";
 import group from "../../assets/icons/group.svg";
 import hourglass_empty from "../../assets/icons/hourglass_empty.svg";
+import SidebarFooter from "./SidebarFooter";
 
 const Sidebar = () => {
   const mainItems = [
@@ -59,6 +60,7 @@ const Sidebar = () => {
         <SidebarItems items={mainItems} />
         <SidebarItems items={otherItems} title="Others 1" />
         <SidebarItems items={otherItems2} title="Others 2" />
+        <SidebarFooter />
       </div>
     </div>
   );
