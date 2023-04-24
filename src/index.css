@@ -6,3 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
+.active-link {
+  @apply text-accent border-l-2 border-accent;
+}
