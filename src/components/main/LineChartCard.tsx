@@ -14,7 +14,7 @@ const LineChartCard = ({
   return (
     <>
       {graphData && (
-        <div className="w-full border-2 rounded-md p-5 my-6 border-[#EFF1F6]">
+        <div className="w-full border-2 rounded-md p-5 my-6 border-light_gray">
           <div className="flex justify-between">
             <div className="">
               <h2 className="text-xl font-bold">Page Views</h2>
