@@ -1,6 +1,10 @@
 import mainstackLogo from "../../assets/mainstack-logo.png";
-import dashboard from "../../assets/icons/dashboard.svg";
 import SidebarItems from "./SidebarItems";
+
+import dashboard from "../../assets/icons/dashboard.svg";
+import edit from "../../assets/icons/edit.svg";
+import group from "../../assets/icons/group.svg";
+import hourglass_empty from "../../assets/icons/hourglass_empty.svg";
 
 const Sidebar = () => {
   const mainItems = [
@@ -8,6 +12,18 @@ const Sidebar = () => {
       title: "Dashboard",
       icon: dashboard,
       active: true,
+    },
+    {
+      title: "Item 1",
+      icon: edit,
+    },
+    {
+      title: "Item 2",
+      icon: group,
+    },
+    {
+      title: "Item 3",
+      icon: hourglass_empty,
     },
   ];
   return (
