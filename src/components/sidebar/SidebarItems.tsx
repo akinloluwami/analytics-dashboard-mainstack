@@ -18,7 +18,7 @@ const SidebarItems = ({
       </p>
       {items.map((item) => (
         <div
-          className={`flex mb-1 transition-colors cursor-pointer py-4 hover:bg-orange-100 ${
+          className={`flex mb-2 transition-colors cursor-pointer py-2 hover:bg-orange-100 ${
             item.active && "active-link"
           }`}
           key={crypto.randomUUID()}
