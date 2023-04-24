@@ -1,8 +1,8 @@
-import ITopSource from "../../../../typings/top-sources";
+import ITopSources from "../../../../typings/top-sources";
 import DoughnutChart from "../DoughnutChart";
 import DoughnutChartCard from "./DoughnutChartCard";
 
-const TopSources = ({ sources }: { sources: ITopSource[] }) => {
+const TopSources = ({ sources }: { sources: ITopSources[] }) => {
   const mapSourceToColorAndIcon = (source: any) => {
     switch (source) {
       case "google":
@@ -63,30 +63,35 @@ const TopSources = ({ sources }: { sources: ITopSource[] }) => {
     <DoughnutChartCard title="Top Sources">
       <div className="flex items-center justify-between">
         <div className="mt-2">
-          {modifiedData.map((source) => (
-            <div className="my-3 flex items-center" key={source.source}>
-              {source.icon ? (
-                <img
-                  src={source.icon}
-                  alt={source.source}
-                  className="w-5 mr-2"
-                />
-              ) : (
+          {modifiedData.map((source) => {
+            const modifiedSourceName = `${source.source
+              .slice(0, 1)
+              .toUpperCase()}${source.source.slice(1)}`;
+            return (
+              <div className="my-3 flex items-center" key={source.source}>
+                {source.icon ? (
+                  <img
+                    src={source.icon}
+                    alt={source.source}
+                    className="w-5 mr-2"
+                  />
+                ) : (
+                  <div
+                    className="w-5 h-5 rounded-full mr-2"
+                    style={{ backgroundColor: source.color }}
+                  ></div>
+                )}
+                {modifiedSourceName}
+                <span className="font-semibold ml-2">{source.percent}%</span>
                 <div
-                  className="w-5 h-5 rounded-full mr-2"
-                  style={{ backgroundColor: source.color }}
+                  className="w-3 h-3 rounded-full ml-2"
+                  style={{
+                    backgroundColor: source.color,
+                  }}
                 ></div>
-              )}
-              {source.source}{" "}
-              <span className="font-semibold ml-2">{source.percent}%</span>
-              <div
-                className="w-3 h-3 rounded-full ml-2"
-                style={{
-                  backgroundColor: source.color,
-                }}
-              ></div>
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
         <div className="">
           <DoughnutChart data={data} />
