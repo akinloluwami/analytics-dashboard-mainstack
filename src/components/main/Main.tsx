@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Durations from "./Durations";
 
 const Main = () => {
   const [data, setData] = useState(null);
@@ -27,6 +28,7 @@ const Main = () => {
         </div>
         <p className="text-accent font-medium cursor-pointer">View analytics</p>
       </div>
+      <Durations />
     </div>
   );
 };
