@@ -18,7 +18,7 @@ const Main = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get("https://fe-task-api.mainstack.io");
+        const res = await axios.get(import.meta.env.VITE_API_URL);
         setData(res.data);
       } catch (error) {
         console.log(error);
