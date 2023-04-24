@@ -2,16 +2,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Durations from "./Durations";
 import LineChartCard from "./LineChartCard";
-import ITopCountries from "../../typings/top-countries";
 import ITopSources from "../../typings/top-sources";
 import IgraphData from "../../typings/graph-data";
-import PieChartCard from "./charts/pie_chart_cards/PieChartCard";
 import TopReferrals from "./charts/pie_chart_cards/TopReferralSources";
 import TopLocations from "./charts/pie_chart_cards/TopLocations";
+import ITopLocation from "../../typings/top-locations";
 
 interface Data {
   graph_data: IgraphData;
-  top_locations: ITopCountries;
+  top_locations: ITopLocation[];
   top_sources: ITopSources;
 }
 
@@ -44,7 +43,7 @@ const Main = () => {
       <Durations />
       <LineChartCard graphData={data?.graph_data} />
       <div className="my-4 flex gap-4 w-full">
-        <TopLocations />
+        {data?.top_locations && <TopLocations locations={data.top_locations} />}
         <TopReferrals />
       </div>
     </div>
