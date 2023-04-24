@@ -11,7 +11,7 @@ import TopSources from "./charts/doughnut_chart_cards/TopReferralSources";
 interface Data {
   graph_data: IgraphData;
   top_locations: ITopLocation[];
-  top_sources: ITopSources;
+  top_sources: ITopSources[];
 }
 
 const Main = () => {
