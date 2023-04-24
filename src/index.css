@@ -29,3 +29,7 @@
 .active-link {
   @apply text-accent border-l-2 border-accent;
 }
+
+.pill {
+  /* @apply border-2 border-[#EFF1F6] rounded-full; */
+}
