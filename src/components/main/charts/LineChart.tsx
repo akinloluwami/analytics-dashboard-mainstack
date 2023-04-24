@@ -20,6 +20,8 @@ ChartJS.register(
   Legend
 );
 
+import faker from "faker";
+
 export const options = {
   responsive: true,
   plugins: {
@@ -48,7 +50,11 @@ export const data = {
 };
 
 const LineChart = () => {
-  return <div>LineChart</div>;
+  return (
+    <div>
+      <Line options={options} data={data} />
+    </div>
+  );
 };
 
 export default LineChart;
