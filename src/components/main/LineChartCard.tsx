@@ -14,7 +14,7 @@ const LineChartCard = ({
   return (
     <>
       {graphData && (
-        <div className="w-full border-2 rounded-md p-3 my-6 border-[#EFF1F6]">
+        <div className="w-full border-2 rounded-md p-5 my-6 border-[#EFF1F6]">
           <div className="flex justify-between">
             <div className="">
               <h2 className="text-xl font-bold">Page Views</h2>
@@ -24,7 +24,7 @@ const LineChartCard = ({
               <img src={info} alt="info" />
             </button>
           </div>
-          <h1 className="text-4xl font-bold mt-3">500</h1>
+          <h1 className="text-4xl font-bold my-5">500</h1>
           <LineChart graphData={graphData} />
         </div>
       )}
