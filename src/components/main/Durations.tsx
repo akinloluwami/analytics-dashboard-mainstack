@@ -24,7 +24,10 @@ const Durations = () => {
   return (
     <div className="flex space-x-4 my-5">
       {durations.map((duration) => (
-        <button key={crypto.randomUUID()} className={`pill`}>
+        <button
+          key={crypto.randomUUID()}
+          className={`pill ${duration.active && "active-pill"}`}
+        >
           {duration.label}
         </button>
       ))}
