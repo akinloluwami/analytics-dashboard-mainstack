@@ -9,8 +9,8 @@ const PieChartCard = ({ title, children }: PieChartCardProps) => {
       <div className="flex items-center justify-between">
         <h1 className="font-bold">{title}</h1>
         <button className="text-accent font-semibold">View full reports</button>
-        <div className="">{children}</div>
       </div>
+      <div className="">{children}</div>
     </div>
   );
 };
