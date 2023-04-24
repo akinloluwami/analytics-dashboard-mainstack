@@ -19,6 +19,7 @@ ChartJS.register(
 );
 
 import IgraphData from "../../../typings/graph-data";
+import moment from "moment";
 
 export const options = {
   responsive: true,
@@ -41,8 +42,12 @@ export const options = {
 };
 
 const LineChart = ({ graphData }: { graphData: IgraphData }) => {
+  const labels = Object.keys(graphData.views).map((date) =>
+    moment(date).format("DD MMM")
+  );
+
   const data = {
-    labels: Object.keys(graphData.views),
+    labels,
     datasets: [
       {
         label: "Views",
