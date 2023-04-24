@@ -13,7 +13,7 @@ const SidebarItems = ({
 }) => {
   return (
     <div className="my-8">
-      <p className="uppercase ml-8 mb-3 font-medium text-sec_gray text-sm">
+      <p className="uppercase ml-8 mb-3 font-medium text-sec_gray text-[12px]">
         {title}
       </p>
       {items.map((item) => (
@@ -26,7 +26,7 @@ const SidebarItems = ({
           <img src={item.icon} className="ml-8" />{" "}
           <span
             className={`font-semibold items-center ml-2 ${
-              item.active && "text-accent"
+              item.active ? "text-accent" : "text-sec_gray"
             }`}
           >
             {item.title}
