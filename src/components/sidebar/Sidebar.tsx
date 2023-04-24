@@ -28,7 +28,7 @@ const Sidebar = () => {
   ];
   return (
     <div>
-      <img src={mainstackLogo} alt="logo" />
+      <img src={mainstackLogo} className="ml-8" alt="logo" />
       <div className="">
         <SidebarItems items={mainItems} />
       </div>
